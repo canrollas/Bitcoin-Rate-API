@@ -17,13 +17,13 @@
 ```python
     import sqlite3
     
-    def database_fetcher(db_name):
+    def databaseInsert(db_name,date,data):
 
         con = sqlite3.connect(db_name) 
 
         cursor = con.cursor() 
 
-        cursor.execute("INSERT INTO data (time, value) VALUES ('TIME FROM PYTHON', 'DATA FROM API')")
+        cursor.execute("INSERT INTO data (time, value) VALUES ('date', 'data')")
 
         cursor.close()
 
